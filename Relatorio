@@ -1,0 +1,5 @@
+class  Relatorio {
+    divertido  gerarRelatorio ( objeto :  Imprimivel ) {
+        objeto.mostrarDados ()
+    }
+}
