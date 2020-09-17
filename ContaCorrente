@@ -1,0 +1,30 @@
+classe  ContaCorrente ( numero :  Int , saldo :  Double , private  val  táxonsDeOperacao :  Double ) :  ContaBancaria (numero, saldo),
+    Imprimivel {
+    limite var :  Double  =  200,00
+    override  fun  sacar ( valor :  Double ) :  Boolean {
+        if ((valor + taxaDeOperacao) <= saldo) {
+            saldo - = (valor + taxaDeOperacao)
+            println ( " novo saldo $ saldo " )
+            retorno  verdadeiro
+        } else {
+            println ( " saldo insuficiente " )
+            retornar  falso
+
+        }
+    }
+
+    override  fun  depositar ( valor :  Double ) :  Boolean {
+        if ((valor + saldo) > = taxaDeOperacao) {
+            saldo + = (valor - taxaDeOperacao)
+            println ( " novo saldo $ saldo " )
+            retorno  verdadeiro
+        } else {
+            retornar  falso
+        }
+    }
+
+    override  fun  mostrarDados () {
+        println ( " Conta corrente. Atributos, número: $ numero, saldo: $ saldo, taxa de operacao: $ taxaDeOperacao " )
+    }
+
+}
