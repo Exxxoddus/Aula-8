@@ -1,0 +1,26 @@
+classe  Banco  :  Imprimivel {
+    var contas =  ArrayList < ContaBancaria > ()
+    diversão  inserir ( conta :  ContaBancaria ) {
+        contas.add (conta)
+        println ( " contido " )
+    }
+
+     removedor divertido ( conta :  ContaBancaria ) {
+        contas.remove (conta)
+        println ( " conta removida " )
+    }
+
+    fun  procurarconta ( numero :  Int ) :  ContaBancaria ? {
+        if (numero em  0 até contas.size) {
+            voltar contas [numero]
+        } else {
+            retornar  nulo
+        }
+    }
+
+    override  fun  mostrarDados () {
+        para (eu nas contas) {
+            println ( " atributos, número: $ {i.numero} , saldo: $ {i.saldo} " )
+        }
+    }
+}
